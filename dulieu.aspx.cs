@@ -15,10 +15,7 @@ public partial class dulieu : System.Web.UI.Page
         string connectionString = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         mysql = new SQL(connectionString);
         HienThiGiaTriCamBien();
-
-        //HienThiGiaTriCamBien("Nhiet do", "28/5/2023 01:49:00", "28/5/2023 01:51:00");
     }
-
     void HienThiGiaTriCamBien()
     {
         string html1 =
@@ -48,7 +45,5 @@ public partial class dulieu : System.Web.UI.Page
 
         string html3 = "</table>";
         Literal_HienThiGiaTriCamBien.Text = html1 + html2 + html3;
-
     }
- 
 }

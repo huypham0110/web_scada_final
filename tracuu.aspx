@@ -31,36 +31,22 @@
             background-color: #dddddd;
         }
 
-        header { /* đầu cuối trang*/
-
-
+        header {
             color: white;
             background-color: #0077b5;
-            clear: right; /*header foooter se dat ben phai so voi cac phan tu khac*/
-
+            clear: right;
             display: flex;
             justify-content:space-between;
             align-content: center;
-
-            
         }
 
-        footer {
-            padding: 1em; /* nội dung và viền cho phần tử*/
-            color: white;
-            background-color: #0077b5;
-            clear: right; /*header foooter se dat ben phai so voi cac phan tu khac*/
+        nav ul { 
+            list-style-type: none; 
+            padding: 0;
         }
 
-
-
-        nav ul { /* định dang các phần tử kh thứ tự của nav*/
-            list-style-type: none; /* loại bỏ kí hiệu của danh sách không có thứ tự*/
-            padding: 0; /* loại bỏ khoảng trắng */
-        }
-
-        nav ul a { /* định dạng liên kết phần tử của nav*/
-            text-decoration: none; /*loại bỏ gạch chân mặc định*/
+        nav ul a { 
+            text-decoration: none; 
             padding: 5px 20px;
             display: block;
             font-weight:bold;
@@ -68,58 +54,51 @@
             font-family: arial, sans-serif;
         }
 
-        article { /* nội dung */
-           
+        article {
             display: flex;
-
             justify-content:center;
             font-family: arial, sans-serif;
-      
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-
-        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
-        </asp:ToolkitScriptManager>
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>
         <div class="container">
-
-        <header>
-             <img src="hcmute_header1.png" alt="" width="492" height="120" />
-             <nav>
-                <ul>
-                    <li><a href="Default.aspx" style="color: white;"> GIỚI THIỆU </a></li>
-                    <li><a href="dulieu.aspx" style="color: white;"> DỮ LIỆU </a></li>
-                    <li><a href="tracuu.aspx" style="color: white;"> TRA CỨU </a></li>
-                </ul>
-            </nav>
-        </header>
-        
+            <header>
+                <img src="image/hcmute_header1.png" alt="" width="492" height="120" />
+                <nav>
+                    <ul>
+                        <li><a href="Default.aspx" style="color: white;"> GIỚI THIỆU </a></li>
+                        <li><a href="dulieu.aspx" style="color: white;"> DỮ LIỆU </a></li>
+                        <li><a href="tracuu.aspx" style="color: white;"> TRA CỨU </a></li>
+                    </ul>
+                </nav>
+            </header>
             <hr />
-        <article>
-            
-        <div>
-            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                <ContentTemplate>
-                    <label for="tbxSensor">Sensor name:</label>
-                    <asp:TextBox ID="tbxSensor" runat="server" placeholder="Nhiet do"></asp:TextBox>
-                    <label for="tbxStartTime">Start Time:</label>
-                    <asp:TextBox ID="tbxStartTime" runat="server" placeholder="dd/mm/yyyy hh:mm:ss"></asp:TextBox>
-                    <label for="tbxEndTime">End Time:</label>
-                    <asp:TextBox ID="tbxEndTime" runat="server" placeholder="dd/mm/yyyy hh:mm:ss"></asp:TextBox>
-                    <asp:Button ID="btnXem" runat="server"  Font-Size="Medium" Text="Tìm kiếm" OnClick="btnXem_Click" /> 
-                    <br />
-                    <asp:Literal ID="Literal_HienThiTraCuu" runat="server"></asp:Literal>
-                </ContentTemplate>
-            </asp:UpdatePanel>
-           
-        </div>
-            
 
-        </article>
+            <article>
+                <div>
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                            <label for="tbxSensor">Tên cảm biến:</label>
+                            <asp:TextBox ID="tbxSensor" runat="server" placeholder="Nhiet do"></asp:TextBox>
+
+                            <label for="tbxStartTime">Thời gian bắt đầu:</label>
+                            <asp:TextBox ID="tbxStartTime" runat="server" placeholder="dd/mm/yyyy hh:mm:ss"></asp:TextBox>
+
+                            <label for="tbxEndTime">Thời gian kết thúc:</label>
+                            <asp:TextBox ID="tbxEndTime" runat="server" placeholder="dd/mm/yyyy hh:mm:ss"></asp:TextBox>
+
+                            <asp:Button ID="btnXem" runat="server"  Font-Size="Medium" Text="Tìm kiếm" OnClick="btnXem_Click" /> 
+                            <br />
+
+                            <asp:Literal ID="Literal_HienThiTraCuu" runat="server"></asp:Literal>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </div>
+            </article>
         </div>
-        
     </form>
 </body>
 </html>

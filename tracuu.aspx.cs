@@ -18,13 +18,11 @@ public partial class tracuu : System.Web.UI.Page
 
     }
 
-    
     void HienThiGiaTriCamBien(
         string sensor,
         string startTime,
         string endTime)
     {
-
         string html1 =
             "<br> <table>" +
             "<caption><h3>Kết quả tra cứu cảm biến " + sensor + "</h3></caption>"+
@@ -52,9 +50,7 @@ public partial class tracuu : System.Web.UI.Page
 
         string html3 = "</table>";
         Literal_HienThiTraCuu.Text = html1 + html2 + html3;
-
     }
-
     protected void btnXem_Click(object sender, EventArgs e)
     {
         sensor = tbxSensor.Text;

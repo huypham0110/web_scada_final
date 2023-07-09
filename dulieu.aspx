@@ -35,7 +35,6 @@
             color: white;
             background-color: #0077b5;
             clear: right;
-
             display: flex;
             justify-content:space-between;
             align-content: center;
@@ -58,34 +57,28 @@
         article { 
             display: flex;
             justify-content:center;
-      
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-
-        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
-        </asp:ToolkitScriptManager>
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>
         <div class="container">
-
-        <header>
-             <img src="hcmute_header1.png" alt="" width="492" height="120" />
-             <nav>
-                <ul>
-                    <li><a href="Default.aspx" style="color: white;"> GIỚI THIỆU </a></li>
-                    <li><a href="dulieu.aspx" style="color: white;"> DỮ LIỆU </a></li>
-                    <li><a href="tracuu.aspx" style="color: white;"> TRA CỨU </a></li>
-                </ul>
-            </nav>
-        </header>
-        
+            <header>
+                <img src="image/hcmute_header1.png" alt="" width="492" height="120" />
+                <nav>
+                    <ul>
+                        <li><a href="Default.aspx" style="color: white;"> GIỚI THIỆU </a></li>
+                        <li><a href="dulieu.aspx" style="color: white;"> DỮ LIỆU </a></li>
+                        <li><a href="tracuu.aspx" style="color: white;"> TRA CỨU </a></li>
+                    </ul>
+                </nav>
+            </header>
             <hr />
-        <article>
-            <asp:Literal ID="Literal_HienThiGiaTriCamBien" runat="server"></asp:Literal>
-        </article>
+            <article>
+                <asp:Literal ID="Literal_HienThiGiaTriCamBien" runat="server"></asp:Literal>
+            </article>
         </div>
-        
     </form>
 </body>
 </html>
