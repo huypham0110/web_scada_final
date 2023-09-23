@@ -1,7 +1,8 @@
 <p align="center">
  <h1 align="center">Website của hệ thống SCADA</h1>
 </p>
-#Tổng quan
+# Tổng quan
+
 Website hiển thị và cho phép tra cứu giá trị của các cảm biến trong hệ thống SCADA. Về phần dữ liệu, các dữ liệu sẽ được cập nhật mỗi 1 phút từ PLC để lưu vào Database, sau đó sẽ cập nhật hiển thị lên Web
 <p align="center">
   <img src="image/GioiThieu.jpeg" width=600><br/>
