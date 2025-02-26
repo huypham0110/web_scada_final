@@ -1,0 +1,60 @@
+
+Sub VBFunction_1()
+
+Dim objConnection
+Dim objCommand
+Dim strConnectionString
+Dim strSQL
+Dim lngValue
+
+strConnectionString = "Provider=MSDASQL;DSN=Project7;UID=sa;PWD=01102002;"
+
+strSQL = "INSERT INTO sensor_value (Sensor,Value,Time) VALUES (N'Muc nuoc'"&"," & SmartTags("DATA1_Bienphuthetichpha_DDout") & "," & "GETDATE()" & ");"
+
+Set objConnection = CreateObject("ADODB.Connection")
+objConnection.ConnectionString = strConnectionString
+objConnection.Open
+//
+Sử dụng đối tượng objConnection để thiết lập kết nối đến cơ sở dữ liệu thông qua chuỗi kết nối đã được định nghĩa.
+Sử dụng phương thức Open để mở kết nối.
+//
+
+Set objCommand = CreateObject("ADODB.Command")
+With objCommand
+.ActiveConnection = objConnection
+.CommandText = strSQL
+End With
+objCommand.Execute
+Set objCommand = Nothing
+objConnection.Close
+Set objConnection = Nothing
+
+strSQL = "INSERT INTO sensor_value (Sensor,Value,Time) VALUES (N'Nhiet do'"&"," & SmartTags("NHIET DO") & "," & "GETDATE()" & ");"
+Set objConnection = CreateObject("ADODB.Connection")
+objConnection.ConnectionString = strConnectionString
+objConnection.Open
+Set objCommand = CreateObject("ADODB.Command")
+With objCommand
+.ActiveConnection = objConnection
+.CommandText = strSQL
+End With
+objCommand.Execute
+Set objCommand = Nothing
+objConnection.Close
+Set objConnection = Nothing
+
+strSQL = "INSERT INTO sensor_value (Sensor,Value,Time) VALUES (N'Ap suat'"&"," & SmartTags("AP SUAT") & "," & "GETDATE()" & ");"
+Set objConnection = CreateObject("ADODB.Connection")
+objConnection.ConnectionString = strConnectionString
+objConnection.Open
+Set objCommand = CreateObject("ADODB.Command")
+With objCommand
+.ActiveConnection = objConnection
+.CommandText = strSQL
+End With
+objCommand.Execute
+Set objCommand = Nothing
+objConnection.Close
+Set objConnection = Nothing
+
+End Sub
